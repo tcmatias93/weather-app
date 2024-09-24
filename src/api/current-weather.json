@@ -1,0 +1,24 @@
+{
+  "lat": "51.50853N",
+  "lon": "0.12574W",
+  "elevation": 25,
+  "timezone": "Europe/London",
+  "units": "uk",
+  "current": {
+    "icon": "overcast",
+    "icon_num": 7,
+    "summary": "Overcast",
+    "temperature": 12.5,
+    "feels_like": 10.2,
+    "wind_chill": 11.2,
+    "dew_point": 9.0,
+    "wind": { "speed": 7.9, "gusts": 12.3, "angle": 248, "dir": "WSW" },
+    "precipitation": { "total": 0.0, "type": "none" },
+    "cloud_cover": 100,
+    "ozone": 311.12,
+    "pressure": 1005,
+    "uv_index": 0.0,
+    "humidity": 77,
+    "visibility": 15.02
+  }
+}
