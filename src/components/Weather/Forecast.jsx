@@ -4,7 +4,6 @@ import DailyForecastWidget from "./DailyForecastWidget";
 import HourlyForecastWidget from "./HourlyForecastWidget";
 
 const Forecast = ({ title, type, data }) => {
-  console.log(data);
   return (
     <div className="Forecast">
       <div className="forecast-container">
