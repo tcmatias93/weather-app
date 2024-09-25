@@ -1,3 +1,5 @@
+import WeatherIcon from "../Generales/WeatherIcon";
+
 const HourlyForecastWidget = ({ data }) => {
   const { date, icon, summary, temperature, precipitation, wind } = data;
   const locale = navigator.language;
@@ -40,7 +42,9 @@ const HourlyForecastWidget = ({ data }) => {
       <div className="day">{weather_date.day}</div>
       <div className="time">{weather_date.time}</div>
       <div className="icon-temp">
-        <div className="icon"></div>
+        <div className="icon">
+          <WeatherIcon iconNumber={icon} summary={summary} />
+        </div>
         <div className="temperature">{Math.round(temperature)}</div>
       </div>
       <div className="precipitation">{Math.round(precipitation.total)}</div>

@@ -1,4 +1,5 @@
 import { getCurretntWeather } from "../../api/index";
+import WeatherIcon from "../Generales/WeatherIcon";
 
 import "../../styles/components/CurrentWeather.css";
 
@@ -67,7 +68,9 @@ const CurrentWeather = () => {
     <div className="CurrentWeather">
       <div className="temperature">
         <div className="value">
-          <div className="weather-icon"></div>
+          <div className="weather-icon">
+            <WeatherIcon iconNumber={icon_num} summary={summary} />
+          </div>
           <div className="real">{Math.round(temperature)}</div>
           <div className="feels_like">Feels like {Math.round(feels_like)}</div>
         </div>

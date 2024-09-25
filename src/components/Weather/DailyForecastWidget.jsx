@@ -1,3 +1,5 @@
+import WeatherIcon from "../Generales/WeatherIcon";
+
 const DailyForecastWidget = ({ data }) => {
   const {
     day,
@@ -30,7 +32,9 @@ const DailyForecastWidget = ({ data }) => {
     <div className="widget">
       <div className="day">{weather_date.day}</div>
       <div className="icon-temp">
-        <div className="icon"></div>
+        <div className="icon">
+          <WeatherIcon iconNumber={icon} summary={summary} />
+        </div>
         <div className="temperature">
           <div className="max">{Math.round(temperature_max)}</div>
           <div className="min">{Math.round(temperature_min)}</div>
