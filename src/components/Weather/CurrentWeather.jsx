@@ -1,11 +1,10 @@
-import { getCurretntWeather } from "../../api/index";
+import { useContext } from "react";
 import WeatherIcon from "../Generales/WeatherIcon";
 
 import "../../styles/components/CurrentWeather.css";
+import WeatherContext from "../../context/weather.context";
 
-const CurrentWeather = () => {
-  const data = getCurretntWeather();
-
+const CurrentWeather = ({ data }) => {
   const {
     cloud_cover,
     feels_like,
@@ -18,6 +17,7 @@ const CurrentWeather = () => {
     visibility,
     wind,
   } = data;
+  const { units } = useContext(WeatherContext);
 
   const otherInfoWidgets = [
     {
@@ -25,42 +25,42 @@ const CurrentWeather = () => {
       icon: "droplet",
       name: "Precipitation",
       value: Math.round(precipitation.total),
-      unit: "in/h", //units.precipitation,
+      unit: units.precipitation,
     },
     {
       id: 1,
       icon: "wind",
       name: "Wind",
       value: Math.round(wind.speed),
-      unit: "mph", //units.wind_speed,
+      unit: units.wind_speed,
     },
     {
       id: 2,
       icon: "moisture",
       name: "Humidity",
       value: Math.round(humidity),
-      unit: "%", //units.humidity,
+      unit: units.humidity,
     },
     {
       id: 3,
       icon: "sunglasses",
       name: "UV index",
       value: Math.round(uv_index),
-      unit: "UV", //units.uv_index,
+      unit: units.uv_index,
     },
     {
       id: 4,
       icon: "clouds-fill",
       name: "Clouds cover",
       value: Math.round(cloud_cover),
-      unit: "%", //units.cloud_cover,
+      unit: units.cloud_cover,
     },
     {
       id: 5,
       icon: "eye",
       name: "Visibility",
       value: Math.round(visibility),
-      unit: "mi", //units.visibility,
+      unit: units.visibility,
     },
   ];
 

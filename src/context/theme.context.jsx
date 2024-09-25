@@ -22,7 +22,6 @@ function ThemeProvider({ children }) {
     setDark(isSystemThemeDark === true);
   }, []);
 
-  console.log(dark);
   return (
     <ThemeContext.Provider value={{ dark, setDark, saveThemeToLocalStorage }}>
       {children}
